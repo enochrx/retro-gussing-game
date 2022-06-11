@@ -24,7 +24,7 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.score').textConten = score;
   } else if (guess > secretNumber) {
     document.querySelector('.message').textContent = '😂 Guess too high!';
-    score--; // so score decreases by 1 on every wrong guess
+    score--; // so score decreases by 1 on every wrong guess.
     document.querySelector('.score').textConten = score;
   }
 });
