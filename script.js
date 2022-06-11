@@ -6,6 +6,9 @@ Math.random(); // Math is an object in JS and random() is one of the methods in 
 
 const secretNumber = Math.trunc(Math.random() * 20) + 1;
 document.querySelector('.number').textContent = secretNumber;
+
+let score = 20; //Using let cos 'const' iks immutable and we new the value of score to decrease on kevery wrong guesses
+
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
 
@@ -15,5 +18,13 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.message').textContent = '⛔ No Number';
   } else if (guess === secretNumber) {
     document.querySelector('.message').textContent = '🎉 Correct Number!';
+  } else if (guess < secretNumber) {
+    document.querySelector('.message').textContent = '😒 Guess too low!';
+    score = score - 1; // also 'score--'
+    document.querySelector('.score').textConten = score;
+  } else if (guess > secretNumber) {
+    document.querySelector('.message').textContent = '😂 Guess too high!';
+    score--;
+    document.querySelector('.score').textConten = score;
   }
 });
