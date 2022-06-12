@@ -8,6 +8,10 @@ const secretNumber = Math.trunc(Math.random() * 20) + 1;
 
 let score = 20; //Using let cos 'const' iks immutable and we new the value of score to decrease on kevery wrong guesses
 
+document.querySelector('.btn again').addEventListener('click', function () {
+  document.querySelector('.btn again').score;
+});
+
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
 
