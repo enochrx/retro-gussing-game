@@ -17,13 +17,13 @@ document.querySelector('.check').addEventListener('click', function () {
   if (!guess) {
     document.querySelector('.message').textContent = '⛔ No Number';
 
-    document.querySelector(body).style.backgroundColor = '#f6dc1';
+    document.querySelector('body').style.backgroundColor = '#f6dc1';
 
     //When the guess is right and player wins
   } else if (guess === secretNumber) {
     document.querySelector('.message').textContent = '🎉 Correct Number!';
 
-    document.querySelector(body).style.backgroundColor = '#5ddc36';
+    document.querySelector('body').style.backgroundColor = '#5ddc36';
 
     //When guess is too Low
   } else if (guess < secretNumber) {
@@ -31,11 +31,11 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.message').textContent = '😒 Guess too low!';
       score = score - 1; // also 'score--'.
       document.querySelector('.score').textContent = score;
-      document.querySelector(body).style.backgroundColor = '#f6dc1';
+      document.querySelector('body').style.backgroundColor = '#f6dc1';
     } else {
       document.querySelector('.message').textContent = '🤷‍♂️ You lost the game!';
       document.querySelector('.score').textContent = 0;
-      document.querySelector(body).style.backgroundColor = '#f61f1f';
+      document.querySelector('body').style.backgroundColor = '#f61f1f';
     }
 
     //When guess is too High
@@ -44,11 +44,11 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.message').textContent = '😂 Guess too high!';
       score--; // so score decreases by 1 on every wrong guess.
       document.querySelector('.score').textContent = score;
-      document.querySelector(body).style.backgroundColor = '#f6dc1';
+      document.querySelector('body').style.backgroundColor = '#f6dc1';
     } else {
       document.querySelector('.message').textContent = '🤷‍♂️ You lost the game!';
       document.querySelector('.score').textContent = 0;
-      document.querySelector(body).style.backgroundColor = '#f61f1f';
+      document.querySelector('body').style.backgroundColor = '#f61f1f';
     }
   }
 });
