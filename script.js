@@ -6,7 +6,7 @@ Math.random(); // Math is an object in JS and random() is one of the methods in 
 
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 
-let score = 20; //Using let cos 'const' iks immutable and we new the value of score to decrease on kevery wrong guesses
+let score = 20; //Using 'let' cos 'const' is immutable and we need+ the value of score to decrease on every wrong guesses
 let highscore = 0;
 
 const displayMessage = message => {
