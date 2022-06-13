@@ -49,6 +49,7 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('body').style.backgroundColor = '#f61f1f';
     }
 
+    //Alternatively
     //When guess is too Low
     // } else if (guess < secretNumber) {
     //     if (score > 1) {
